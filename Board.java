@@ -24,9 +24,9 @@ public class Board {
     }
 
     public boolean isEmpty() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (board[i][j].getStatus() == CellStatus.EMPTY)
+        for (Cell[] x : board) {
+            for (Cell y : x) {
+                if (y.getStatus() == CellStatus.EMPTY)
                     return true;
             }
         }
